@@ -1,4 +1,4 @@
-import { Pin } from "ui";
+import { Pin, BowlingBall } from "ui";
 
 export default function Web() {
   return (
@@ -6,6 +6,9 @@ export default function Web() {
       <h1>Web</h1>
       <Pin>0</Pin>
       <Pin>1</Pin>
+      <br />
+      <BowlingBall index={0} />
+      <BowlingBall index={1} />
     </div>
   );
 }
