@@ -1,4 +1,3 @@
-import * as React from "react";
 import { useEffect, useState, useCallback, forwardRef } from "react";
 
 const roundTo = (n: number, factor: number) => Math.ceil(n / factor) * factor;

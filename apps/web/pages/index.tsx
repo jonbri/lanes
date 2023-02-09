@@ -1,3 +1,4 @@
+import * as React from "react";
 import { Pin, BowlingBall } from "lanes-ui";
 
 export default function Web() {
@@ -6,9 +7,9 @@ export default function Web() {
       <h1>Web</h1>
       <Pin>{0}</Pin>
       <Pin>{1}</Pin>
-      <br />
       <BowlingBall index={0} />
       <BowlingBall index={1} />
+      <BowlingBall index={2} />
     </div>
   );
 }
