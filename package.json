@@ -10,7 +10,8 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "gh-pages": "git subtree push --prefix apps/web/.next/server/pages origin gh-pages"
   },
   "devDependencies": {
     "eslint-config-custom": "*",
