@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useEffect, useState, forwardRef } from "react";
+import { useEffect, useState, useCallback, forwardRef } from "react";
 
 const roundTo = (n: number, factor: number) => Math.ceil(n / factor) * factor;
 const roundTo20 = (n: number) => roundTo(n, 20);
@@ -36,9 +36,14 @@ export const BowlingBall = forwardRef<HTMLDivElement, BowlingBallProps>(
     }: BowlingBallProps,
     ref
   ) => {
-    const getRandomHeight = () =>
-      roundTo20(randomNumberBetween(minHeight, maxHeight));
-    const occasionally = () => occasionallyByFactor(occasionalityFactor);
+    const getRandomHeight = useCallback(
+      () => roundTo20(randomNumberBetween(minHeight, maxHeight)),
+      [maxHeight, minHeight]
+    );
+    const occasionally = useCallback(
+      () => occasionallyByFactor(occasionalityFactor),
+      [occasionalityFactor]
+    );
     const [height, setHeight] = useState(
       initiallyRandom ? getRandomHeight() : defaultHeight
     );
@@ -52,7 +57,7 @@ export const BowlingBall = forwardRef<HTMLDivElement, BowlingBallProps>(
         }
       }, rate);
       return () => clearInterval(intervalId);
-    }, []);
+    }, [getRandomHeight, jump, occasionally, onJump, rate]);
 
     return (
       <div
@@ -72,3 +77,4 @@ export const BowlingBall = forwardRef<HTMLDivElement, BowlingBallProps>(
     );
   }
 );
+BowlingBall.displayName = "BowlingBall";
