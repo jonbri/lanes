@@ -12,7 +12,7 @@
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "gh-pages:prepare": "sed -i '/^.next\\/$/s/^/#/' .gitignore",
-    "gh-pages": "yarn gh-pages:prepare && yarn build && git push origin `git subtree split --prefix apps/web/.next/server/pages main`:gh-pages --force && git stash -u"
+    "gh-pages": "yarn gh-pages:prepare && yarn build && git add . && git commit -m 'build' && git push origin `git subtree split --prefix apps/web/.next/server/pages main`:gh-pages --force && git reset --hard HEAD~"
   },
   "devDependencies": {
     "eslint-config-custom": "*",
