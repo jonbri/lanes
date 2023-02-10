@@ -1,13 +1,16 @@
 {
   "name": "lanes-ui",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "license": "MIT",
   "scripts": {
     "lint": "TIMING=1 eslint \"**/*.ts*\"",
     "build": "tsup index.ts --format cjs --dts",
-    "dev": "yarn build -- --watch"
+    "dev": "yarn build -- --watch",
+    "publish:start": "cd packages/lanes-ui && yarn changeset",
+    "publish:version": "cd packages/lanes-ui && yarn changeset version",
+    "publish": "cd packages/lanes-ui && yarn changeset publish"
   },
   "devDependencies": {
     "@types/react": "^17.0.37",
