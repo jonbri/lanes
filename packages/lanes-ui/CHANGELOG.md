@@ -1,5 +1,17 @@
 # lanes-ui
 
+## 0.3.0
+
+### Minor Changes
+
+- first changeset
+
+### Patch Changes
+
+- this is the summary
+- Updated dependencies
+  - lanes-style@0.1.0
+
 ## 0.2.0
 
 ### Minor Changes
