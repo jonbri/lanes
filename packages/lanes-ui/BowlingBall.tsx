@@ -1,4 +1,5 @@
 import { useEffect, useState, useCallback, forwardRef } from "react";
+import { Ball } from "lanes-common";
 
 const roundTo = (n: number, factor: number) => Math.ceil(n / factor) * factor;
 const roundTo20 = (n: number) => roundTo(n, 20);
@@ -59,20 +60,18 @@ export const BowlingBall = forwardRef<HTMLDivElement, BowlingBallProps>(
     }, [getRandomHeight, jump, occasionally, onJump, rate]);
 
     return (
-      <div
+      <Ball
         ref={ref}
         style={{
           height: `${height}px`,
           width,
           backgroundColor: index % 2 === 0 ? "tan" : "lightgreen",
-          borderRadius: "50%",
-          textAlign: "center" as const,
         }}
       >
         <strong>{index}</strong>
         <br />
         <span>{height}</span>
-      </div>
+      </Ball>
     );
   }
 );

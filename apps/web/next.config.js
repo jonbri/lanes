@@ -1,4 +1,4 @@
 module.exports = {
   reactStrictMode: true,
-  transpilePackages: ["lanes-ui"],
+  transpilePackages: ["lanes-ui", "lanes-common"],
 };

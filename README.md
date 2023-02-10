@@ -10,6 +10,7 @@ This turborepo uses [Yarn](https://classic.yarnpkg.com/) as a package manager. I
 
 - `web`: a [Next.js](https://nextjs.org/) app
 - `lanes-ui`: a React component library used by the `web` applications
+- `lanes-common`: a React component library used by the other library packages
 - `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `tsconfig`: `tsconfig.json`s used throughout the monorepo
 
