@@ -4,7 +4,7 @@ import { Pin } from "lanes-ui";
 export default function StyleGuide() {
   return (
     <div>
-      <h1>Web</h1>
+      <h1>Styleguide</h1>
       <Pin>{0}</Pin>
       <Pin>{1}</Pin>
     </div>
