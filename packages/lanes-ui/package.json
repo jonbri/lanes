@@ -7,10 +7,7 @@
   "scripts": {
     "lint": "TIMING=1 eslint \"**/*.ts*\"",
     "build": "tsup index.ts --format cjs --dts",
-    "dev": "yarn build -- --watch",
-    "publish:start": "cd packages/lanes-ui && yarn changeset",
-    "publish:version": "cd packages/lanes-ui && yarn changeset version",
-    "publish": "cd packages/lanes-ui && yarn changeset publish"
+    "dev": "yarn build -- --watch"
   },
   "devDependencies": {
     "@types/react": "^17.0.37",
