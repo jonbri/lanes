@@ -11,6 +11,7 @@
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "status": "turbo status",
     "gh-pages:prepare": "sed -i '/^.next\\/$/s/^/#/' .gitignore",
     "gh-pages": "yarn gh-pages:prepare && yarn build && git add . && git commit -m 'build' && git push origin `git subtree split --prefix apps/web/.next/server/pages main`:gh-pages --force && git reset --hard HEAD~",
     "publish:start": "cd packages/lanes-ui && yarn changeset",
