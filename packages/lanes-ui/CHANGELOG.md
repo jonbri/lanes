@@ -1,5 +1,13 @@
 # lanes-ui
 
+## 0.6.1
+
+### Patch Changes
+
+- 48e3038: displayName
+- Updated dependencies [9e4a24a]
+  - lanes-common@0.3.2
+
 ## 0.6.0
 
 ### Minor Changes
