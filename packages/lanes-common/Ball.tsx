@@ -1,7 +1,6 @@
 import { ReactNode, CSSProperties, forwardRef } from "react";
 import { useBallStyle } from "lanes-style";
 
-// test
 export interface BallProps {
   children?: ReactNode;
   style: CSSProperties;
