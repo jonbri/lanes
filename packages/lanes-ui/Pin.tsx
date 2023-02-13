@@ -7,3 +7,4 @@ export const Pin = ({ children = 0 }: PinProps) => {
   const pinStyle = usePinStyle();
   return <span style={pinStyle}>{children}</span>;
 };
+Pin.displayName = "Pin";
